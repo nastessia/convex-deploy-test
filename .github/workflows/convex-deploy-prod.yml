@@ -26,4 +26,5 @@ jobs:
       - name: Deploy Convex to prod
         env:
           CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
-        run: npx convex@latest deploy
+          CI: true
+        run: npx convex@latest deploy --prod
