@@ -23,11 +23,7 @@ jobs:
           node-version: 20
           cache: 'npm'
 
-      - name: Install dependencies
-        run: npm install
-
       - name: Deploy Convex to prod
         env:
           CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
-        run: npx --yes convex@latest deploy
-
+        run: npx convex@latest deploy
