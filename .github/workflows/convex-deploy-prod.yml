@@ -29,5 +29,5 @@ jobs:
       - name: Deploy Convex to prod
         env:
           CONVEX_DEPLOY_KEY: ${{ secrets.CONVEX_DEPLOY_KEY }}
-        run: convex deploy
+        run: npx --yes convex@latest deploy
 
